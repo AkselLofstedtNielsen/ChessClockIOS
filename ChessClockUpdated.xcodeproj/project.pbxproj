@@ -16,6 +16,7 @@
 		5C4CF965292F9414009146BB /* ChessClockUpdatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4CF964292F9414009146BB /* ChessClockUpdatedTests.swift */; };
 		5C4CF96F292F9414009146BB /* ChessClockUpdatedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4CF96E292F9414009146BB /* ChessClockUpdatedUITests.swift */; };
 		5C4CF971292F9414009146BB /* ChessClockUpdatedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4CF970292F9414009146BB /* ChessClockUpdatedUITestsLaunchTests.swift */; };
+		5C4CF982292FD6B2009146BB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4CF981292FD6B2009146BB /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5C4CF96A292F9414009146BB /* ChessClockUpdatedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessClockUpdatedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4CF96E292F9414009146BB /* ChessClockUpdatedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClockUpdatedUITests.swift; sourceTree = "<group>"; };
 		5C4CF970292F9414009146BB /* ChessClockUpdatedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClockUpdatedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5C4CF981292FD6B2009146BB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				5C4CF94D292F9411009146BB /* AppDelegate.swift */,
 				5C4CF94F292F9411009146BB /* SceneDelegate.swift */,
 				5C4CF951292F9411009146BB /* ViewController.swift */,
+				5C4CF981292FD6B2009146BB /* SettingsViewController.swift */,
 				5C4CF953292F9411009146BB /* Main.storyboard */,
 				5C4CF956292F9414009146BB /* Assets.xcassets */,
 				5C4CF958292F9414009146BB /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				5C4CF952292F9411009146BB /* ViewController.swift in Sources */,
 				5C4CF94E292F9411009146BB /* AppDelegate.swift in Sources */,
 				5C4CF950292F9411009146BB /* SceneDelegate.swift in Sources */,
+				5C4CF982292FD6B2009146BB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
