@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var secondPlayerTime = 0
     var firstTimer = Timer()
     var secondTimer = Timer()
+    
     //Fixar bugg med flera timers igång samtidigt
     var multipleTimerOne = false
     var multipleTimerTwo = false
@@ -85,15 +86,12 @@ class ViewController: UIViewController {
             setTimesAndLabels(time: 900)
             setCounters(count: 60)
         }
-        
     }
     func blitzRules(){
         setTimesAndLabels(time: 300)
-        
     }
     func rapidPlay(){
         setTimesAndLabels(time: 1800)
-        
     }
     
     //starting settings view
@@ -127,8 +125,6 @@ class ViewController: UIViewController {
                     }
                 }
             }
-            
-            
         }
     }
     @IBAction func playerOneButton(_ sender: Any) {
@@ -190,7 +186,7 @@ class ViewController: UIViewController {
       
     }
     func timeString(time:Int) -> String {
-//         om man vill ha timmar också
+//         tar sekunder till tids format
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60

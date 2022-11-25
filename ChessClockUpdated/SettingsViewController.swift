@@ -26,6 +26,8 @@ class SettingsViewController: UIViewController {
     @IBAction func BlitzButton(_ sender: Any) {
         if Blitz == false{
             Blitz = true
+            WCR = false
+            rapidPlay = false
             inputTimeText.text = "Blitz selected"
         }
         else{
@@ -36,6 +38,8 @@ class SettingsViewController: UIViewController {
     @IBAction func WCRButton(_ sender: UIButton) {
         if WCR == false{
             WCR = true
+            rapidPlay = false
+            Blitz = false
             inputTimeText.text = "WCR selected"
         }else{
             WCR = false
@@ -46,6 +50,8 @@ class SettingsViewController: UIViewController {
     @IBAction func RapidPlayButton(_ sender: Any) {
         if rapidPlay == false{
             rapidPlay = true
+            WCR = false
+            Blitz = false
             inputTimeText.text = "Rapid Play selected"
         }else{
             rapidPlay = false
