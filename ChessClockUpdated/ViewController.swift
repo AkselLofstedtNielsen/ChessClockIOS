@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     
     var resumeTapped = false
     var WCRRule = false
+    var blitzRule = false
+    var rapidPlayRule = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,9 +85,14 @@ class ViewController: UIViewController {
             setTimesAndLabels(time: 900)
             setCounters(count: 60)
         }
-
-       
         
+    }
+    func blitzRules(){
+        setTimesAndLabels(time: 300)
+        
+    }
+    func rapidPlay(){
+        setTimesAndLabels(time: 1800)
         
     }
     
@@ -100,16 +107,24 @@ class ViewController: UIViewController {
             //Kommer åt objektet och nilcheckar
             if let destination = segue.destination as? SettingsViewController{
                 //waiting for obj from other view
-                destination.completionHandler = {InputTime,InputBool in
-                    if InputBool == true{
+                destination.completionHandler = {InputTime,InputWCR,InputBlitz,InputRapidPlay in
+                    if InputWCR == true{
                         self.setCounters(count: 0)
                         self.WCRRule = true
                         self.WCRrules()
-                    }else{
+                    }else if InputBlitz == true{
+                        self.setCounters(count: 0)
+                        self.blitzRule = true
+                        self.blitzRules()
+                    }else if InputRapidPlay == true{
+                        self.setCounters(count: 0)
+                        self.rapidPlayRule = true
+                        self.rapidPlay()
+                    }
+                    else{
                         self.setTimesAndLabels(time: InputTime ?? 0)
                         self.setCounters(count: 0)
                     }
-                   
                 }
             }
             

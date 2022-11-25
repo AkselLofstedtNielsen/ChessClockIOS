@@ -10,8 +10,10 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var inputTimeText: UITextField!
-    public var completionHandler : ((Int?,Bool?)-> Void)?
+    public var completionHandler : ((Int?,Bool?,Bool?,Bool?)-> Void)?
     var WCR = false
+    var Blitz = false
+    var rapidPlay = false
 
     
     override func viewDidLoad() {
@@ -21,6 +23,16 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func BlitzButton(_ sender: Any) {
+        if Blitz == false{
+            Blitz = true
+            inputTimeText.text = "Blitz selected"
+        }
+        else{
+            Blitz = false
+        }
+        
+    }
     @IBAction func WCRButton(_ sender: UIButton) {
         if WCR == false{
             WCR = true
@@ -31,9 +43,18 @@ class SettingsViewController: UIViewController {
         
         
     }
+    @IBAction func RapidPlayButton(_ sender: Any) {
+        if rapidPlay == false{
+            rapidPlay = true
+            inputTimeText.text = "Rapid Play selected"
+        }else{
+            rapidPlay = false
+        }
+        
+    }
     @IBAction func saveButton(_ sender: Any) {
         let text = Int(inputTimeText.text ?? "")
-        completionHandler?(text,WCR)
+        completionHandler?(text,WCR,Blitz,rapidPlay)
         
         dismiss(animated: true, completion: nil)
     
